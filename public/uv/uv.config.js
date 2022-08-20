@@ -1,6 +1,6 @@
 self.__uv$config = {
     prefix: '/uv/',
-    bare: 'https://weeb-central.icu/bare/',
+      bare: location.origin + '/bare/',
     encodeUrl: Ultraviolet.codec.xor.encode,
     decodeUrl: Ultraviolet.codec.xor.decode,
     handler: '/uv/uv.handler.js',
