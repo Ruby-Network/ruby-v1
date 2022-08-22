@@ -16,6 +16,7 @@
     <script src="browser.js"></script>
   </head>
     <body>
+      <h1 class="logo">WEEB CENTRAL</h1>
               <nav role="navigation" class="nav-menu w-nav-menu">
           <a href="/index.html" class="nav-link w-nav-link">home</a>
           <a href="/games" class="nav-link w-nav-link">games</a>          
@@ -32,17 +33,17 @@
 
       <span style="display: block; margin-bottom: 6px; font-size: 18px; font-weight: 500;">Tab Title</span>
 
- <input class="title-change" id="title-change-1" <input value="Weeb Central" placeholder="Blank Title"  oninput="document.title = this.value || 'Weeb Central'; set('title', this.value)"></input>
+      <input value="Weeb Central"
+  class="title" id="title" placeholder="No Title" oninput="document.title = this.value || 'Weeb-Central'; set('title', this.value)"></input>
 
 
       <span style="display: block; margin-bottom: 6px; font-size: 18px; font-weight: 500;">Tab Icon</span>
       
       <input
         value="https://weeb-central.icu/index.svg"
-        class="link" id="link" placeholder="Favicon" onchange="faviconChange(this.value)"></input>
-  
-  
-        <span style="display: block; margin-bottom: 6px; font-size: 18px; font-weight: 500;">about:blank</span>
+        class="title" id="title" placeholder="Favicon" onchange="faviconChange(this.value)"></input>
+
+      <span style="display: block; margin-bottom: 6px; font-size: 18px; font-weight: 500;">about:blank</span>
 
       <button onclick="goBlank()" class="button">About:Blank</button>
 
