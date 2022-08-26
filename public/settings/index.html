@@ -1,69 +1,79 @@
 <!DOCTYPE html>
+
 <html>
-  <head>
-  <meta charset="utf-8" />
-  <title>Weeb Central</title>
-  <meta content="width=device-width, initial-scale=1" name="viewport" />
-  <meta name="description" content="Weeb Central is a web search engine that help's end internet censorship
+
+<head>
+    <meta charset="utf-8" />
+    <title>Weeb Central</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta name="description" content="Weeb Central is a web search engine that help's end internet censorship
     Made by Hiro 🔥#0001" />
-      <meta name="keywords" content="Weeb-Central, Proxy, Proxies, Discord, custom, weeb, central, ">
+    <meta name="keywords" content="Weeb-Central, Proxy, Proxies, Discord, custom, weeb, central, ">
     <link rel="stylesheet" href="index.css">
     <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
-  <link rel="icon" type="image/apple-touch-icon.png" href="/img/favicon.ico">
+    <link rel="icon" type="image/apple-touch-icon.png" href="/img/favicon.ico">
 
-     <script src="../js/title.js"></script>
+    <script src="../js/title.js"></script>
     <script src="../js/blank.js"></script>
     <script src="browser.js"></script>
-    <script async src="https://arc.io/widget.min.js#K3htVdqJ"></script>
-  </head>
-    <body>
-      <h1 class="logo">WEEB CENTRAL</h1>
-              <nav role="navigation" class="nav-menu w-nav-menu">
-          <a href="/index.html" class="nav-link w-nav-link">home</a>
-          <a href="/games" class="nav-link w-nav-link">games</a>          
-          <a href="/apps" class="nav-link w-nav-link">apps</a>
-          <a href="/emulators"class="nav-link w-nav-link">emulators</a>
-          <a href="/movies"class="nav-link w-nav-link">movies</a>
-          <a href="/settings" class="nav-link w-nav-link">settings</a>
+</head>
+
+<body>
+    <div class="header">
+        <h1 href="/index.html">WEEB CENTRAL</h1>
+        <nav role="navigation" class="nav-menu w-nav-menu">
+            <a href="/index.html" class="nav-link w-nav-link">home</a>
+            <a href="/games" class="nav-link w-nav-link">games</a>
+            <a href="/apps" class="nav-link w-nav-link">apps</a>
+            <a href="/emulators" class="nav-link w-nav-link">emulators</a>
+            <a href="/movies" class="nav-link w-nav-link">movies</a>
+            <a href="/settings" class="nav-link w-nav-link">settings</a>
         </nav>
-        <div class="menu-button w-clearfix w-nav-button">
     </div>
-    <div class="hero-container w-container">
-      <div class="hero-subtitle">SETTINGS</div>
-      <h1 class="hero-heading">WEEB CENTRAL</h1>
+    <div class="hero-subtitle">SETTINGS</div>
+    <h1 class="hero-heading">WEEB CENTRAL</h1>
 
-      <span style="display: block; margin-bottom: 6px; font-size: 18px; font-weight: 500;">Tab Title</span>
+    <div class="settings">
+        <span style="display: block; margin-bottom: 6px; font-size: 18px; font-weight: 500;">Tab Title</span>
 
-      <input value="Weeb Central"
-  class="title" id="title" placeholder="No Title" oninput="document.title = this.value || 'Weeb-Central'; set('title', this.value)"></input>
-
-
-      <span style="display: block; margin-bottom: 6px; font-size: 18px; font-weight: 500;">Tab Icon</span>
-      
-      <input
-        value="https://weeb-central.icu/index.svg"
-        class="title" id="title" placeholder="Favicon" onchange="faviconChange(this.value)"></input>
-
-      <span style="display: block; margin-bottom: 6px; font-size: 18px; font-weight: 500;">about:blank</span>
-
-      <button onclick="goBlank()" class="button">About:Blank</button>
+        <input value="Weeb Central" class="title" id="title" placeholder="No Title"
+            oninput="document.title = this.value || 'Weeb-Central'; set('title', this.value)"></input>
 
 
-<span style="display: block; margin-bottom: 6px; font-size: 18px; font-weight: 500;">Select Browser</span>
+        <span style="display: block; margin-bottom: 6px; font-size: 18px; font-weight: 500;">Tab Icon</span>
 
-      
-      <select class="select-browser" id="select-browser" onchange="browserChange()">
-          <option value="google">Google</option>
-          <option value="bing">Bing</option>
-          <option value="duckduckgo">DuckDuckGo</option>
-          <option value="yahoo">Yahoo</option>
-          <option value="brave">Brave</option>
+        <input value="https://weeb-central.icu/index.svg" class="title" id="title" placeholder="Favicon"
+            onchange="faviconChange(this.value)"></input>
+
+        <span style="display: block; margin-bottom: 6px; font-size: 18px; font-weight: 500;">about:blank</span>
+
+        <button onclick="goBlank()" class="button">About:Blank</button>
+
+
+        <span style="display: block; margin-bottom: 6px; font-size: 18px; font-weight: 500;">Select
+            Browser</span>
+
+
+        <select class="select-browser" id="select-browser" onchange="browserChange()">
+            <option value="google">Google</option>
+            <option value="bing">Bing</option>
+            <option value="duckduckgo">DuckDuckGo</option>
+            <option value="yahoo">Yahoo</option>
+            <option value="brave">Brave</option>
         </select>
 
 
-       <span style="display: block; margin-bottom: 6px; font-size: 18px; font-weight: 500;">Select Proxy</span> 
+        <span style="display: block; margin-bottom: 6px; font-size: 18px; font-weight: 500;">Select Proxy (Dosen't work yet)</span>
 
+        <select class="select-proxy" id="select-proxy">
+            <option>Ultraviolet</option>
+            <option>Aero</option>
+            <option>Stomp</option>
+            <option>Dip</option>
+            <option>Osana</option>
+        </select>
 
+    </div>
+</body>
 
-    </body>
 </html>
