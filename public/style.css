@@ -204,20 +204,9 @@ p {
     }
 }
 
-input {
-    font-family: 'Shadows Into Light';
-    width: 20%;
-    padding: 20px 20px;
-    margin: 10px 0;
-    box-sizing: border-box;
-    border: 1px black;
-    border-radius: 10px;
-    background-color: #000000;
-    transition: 0.5s;
-}
 
 input {
-
+font-family: 'Shadows Into Light';
   width: 52.5%;
   padding: 20px 20px;
   margin: 10px 0;
