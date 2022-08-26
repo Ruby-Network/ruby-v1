@@ -227,6 +227,9 @@ font-family: 'Shadows Into Light';
   border-style: none;
   background-color: hsla(0, 0%, 40%, 0.64);
   color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .input:focus {
