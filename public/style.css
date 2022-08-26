@@ -202,258 +202,108 @@ p {
     .menu-icon {
         float: left;
     }
-  
-.input {
-  margin-bottom: 20px;
-  border-style: none;
-  background-color: hsla(0, 0%, 40%, 0.64);
-  color: #fff;
 }
 
-.input:focus {
-  box-shadow: 0 0 0 1px hsla(0, 0%, 100%, 0.77);
+input {
+    font-family: 'Shadows Into Light';
+    width: 20%;
+    padding: 20px 20px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 1px black;
+    border-radius: 10px;
+    background-color: #000000;
+    transition: 0.5s;
 }
 
-.input.textarea {
-  min-height: 110px;
-}
-
-.success {
-  padding-top: 29px;
-  background-color: rgba(30, 187, 0, 0.35);
-}
-
-@media screen and (max-width: 991px) {
-  .nav-menu {
-    padding-top: 18px;
-    padding-bottom: 18px;
-    border-top: 1px solid #000;
-    background-color: rgba(0, 0, 0, 0.85);
-  }
-
-  .nav-link {
-    padding-top: 16px;
-    padding-bottom: 16px;
-    font-size: 21px;
-    line-height: 27px;
+.title {
     text-align: center;
-  }
-
-  .menu-button {
-    padding: 20px 0px 20px 20px;
-    color: hsla(0, 0%, 100%, 0.62);
-    font-size: 25px;
-    line-height: 22px;
-  }
-
-  .menu-button:hover {
-    color: #fff;
-  }
-
-  .menu-button.w--open {
-    background-color: transparent;
-    color: #fff;
-  }
-
-  .menu-text {
-    margin-right: 3px;
-    padding: 2px;
-    float: left;
-    font-size: 12px;
-    line-height: 19px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-  }
-
-  .menu-text:hover {
-    color: #fff;
-  }
-
-  .menu-icon {
-    float: left;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .hero-heading {
-    font-size: 61px;
-  }
-
-  .footer {
-    padding-right: 14px;
-    padding-left: 14px;
-  }
-
-  .rsvp-button {
-    margin-top: 15px;
-  }
-
-  .tour-date-row {
-    text-align: center;
-  }
-
-  .contact-link {
-    margin-bottom: 30px;
-  }
-
-  .submit-button.sign-up {
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-  }
-
-  .input-inline {
-    max-width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .menu-button {
-    margin-right: 7px;
-  }
-
-  .album-list {
-    margin-bottom: 60px;
-  }
-
-  .venue {
-    margin-top: 10px;
-    margin-bottom: 10px;
     font-size: 15px;
-  }
-
-  .venue-list-item {
-    padding-top: 16px;
-    padding-bottom: 16px;
-  }
+    color: white;
+    font-family: 'Shadows Into Light';
 }
 
-@media screen and (max-width: 479px) {
-  .hero-heading {
-    font-size: 39px;
-    line-height: 52px;
-  }
-
-  .contact-row {
-    padding-bottom: 16px;
-  }
-
-  .hero-container {
-    padding-right: 13px;
-    padding-left: 13px;
-  }
-
-  .button.big {
-    width: 100%;
-    margin-right: 0px;
-    margin-bottom: 12px;
-    margin-left: 0px;
-  }
+.title::placeholder {
+    opacity: 1;
 }
 
-/* CSS */
-.button-36 {
-  background-image: linear-gradient(92.88deg, #080050 9.16%, #080050 43.89%, #080050 64.72%);
-  border-radius: 8px;
-  border-style: none;
-  box-sizing: border-box;
-  color: #ffffff;
-  cursor: pointer;
-  flex-shrink: 0;
-  font-family: "Inter UI","SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  height: 4rem;
-  padding: 0 1.6rem;
-  text-align: center;
-  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
-  transition: all .5s;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  margin-right: 20px;
+.title-container {
+    margin-top: 50px;
 }
 
-.button-36:hover {
-  box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
-  transition-duration: .1s;
-}
-
-@media (min-width: 768px) {
-  .button-36 {
-    padding: 0 2.6rem;
-  }
-  {
-  font-size: 45.5px;
-}
-input {
-
-  width: 52.5%;
-  padding: 20px 20px;
-  margin: 10px 0;
-  box-sizing: border-box;
-  border: 1px black;
-  border-radius: 10px;
-  background-color: #000000;
+.button {
+    width: 20%;
+    padding: 20px 20px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 1px black;
+    border-radius: 10px;
+    background-color: #000000;
     transition: 0.5s;
-}
-input[type=text] {
-  transition: 0.5s;
-  color: white; 
-  
-
-}
-.button-41 {
-  background-image: linear-gradient(92.88deg, #080050 9.16%, #080050 43.89%, #080050 64.72%);
-  border-radius: 8px;
-  border-style: none;
-  box-sizing: border-box;
-  color: #ffffff;
-  cursor: pointer;
-  flex-shrink: 0;
-  font-family: "Inter UI","SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  height: 4rem;
-  padding: 0 1.6rem;
-  text-align: center;
-  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
-  transition: all .5s;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  margin-right: 20px;
-  margin-top: 10px;
+    text-align: center;
+    font-size: 15px;
+    color: white;
+    opacity: 1;
+    cursor: pointer;
+    font-family: 'Shadows Into Light';
 }
 
-.button-41:hover {
-  box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
-  transition-duration: .1s;
+.settings {
+    text-align: center;
 }
 
-@media (min-width: 768px) {
-  .button-41 {
-    padding: 0 2.6rem;
-  }
-  {
-  font-size: 45.5px;
-}
-input {
 
-  width: 52.5%;
-  padding: 20px 20px;
-  margin: 10px 0;
-  box-sizing: border-box;
-  border: 1px black;
-  border-radius: 10px;
-  background-color: #000000;
+.header {
+    display: flex;
+    /* vertically align the content in the header */
+    align-items: center;
+    /* set a fixed height */
+    height: 40px;
+    margin-left: 15px;
+    padding: 0px 60px;
+    margin-bottom: 30px;
+}
+
+nav {
+    margin-left: auto;
+    margin-right: 90px;
+}
+
+span {
+    color: #ffffff
+}
+
+.select-proxy {
+    width: 20%;
+    padding: 20px 20px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 1px black;
+    border-radius: 10px;
+    background-color: #000000;
     transition: 0.5s;
+    text-align: center;
+    font-size: 15px;
+    color: white;
+    opacity: 1;
+    cursor: pointer;
+    font-family: 'Shadows Into Light';
 }
-input[type=text] {
-  transition: 0.5s;
-  color: white; 
-  
 
+::-webkit-scrollbar {
+    width: 13px;
 }
 
+::-webkit-scrollbar-track {
+    background: #080080;
 }
+
+::-webkit-scrollbar-thumb {
+    background: #000000;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    border-radius: 4px;
 }
