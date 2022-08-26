@@ -216,19 +216,22 @@ input {
     transition: 0.5s;
 }
 
-.title {
-    text-align: center;
-    font-size: 15px;
-    color: white;
-    font-family: 'Shadows Into Light';
-}
+input {
 
-.title::placeholder {
-    opacity: 1;
+  width: 52.5%;
+  padding: 20px 20px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  border: 1px black;
+  border-radius: 10px;
+  background-color: #000000;
+    transition: 0.5s;
 }
+input[type=text] {
+  transition: 0.5s;
+  color: white; 
+  
 
-.title-container {
-    margin-top: 50px;
 }
 
 .button {
