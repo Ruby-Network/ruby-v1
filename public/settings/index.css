@@ -32,6 +32,17 @@ body {
     font-weight: 300;
 }
 
+a:link { text-decoration: none; }
+
+
+a:visited { text-decoration: none; }
+
+
+a:hover { text-decoration: none; }
+
+
+a:active { text-decoration: none; }
+
 h1 {
     font-family: 'Shadows Into Light';
     margin-top: 20px;
@@ -86,6 +97,14 @@ p {
 
 .nav-menu {
     text-align: center;
+    color: white;
+    padding: 12px;
+    align-items: center;
+}
+
+.nav-menu .material-icons{
+    margin-right: 12px;
+    vertical-align: middle;
 }
 
 .nav-link {
@@ -116,6 +135,7 @@ p {
 
 .nav-bar {
     background-color: transparent;
+    position: fixed;
 }
 
 .hero-content {
