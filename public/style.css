@@ -59,7 +59,15 @@ p {
 }
 
 .nav-menu {
-  text-align: center;
+    text-align: center;
+    color: white;
+    padding: 12px;
+    align-items: center;
+}
+
+.nav-menu .material-icons{
+    margin-right: 12px;
+    vertical-align: middle;
 }
 
 .nav-link {
@@ -89,7 +97,8 @@ p {
 }
 
 .nav-bar {
-  background-color: transparent;
+    background-color: transparent;
+    position: fixed;
 }
 
 .hero {
