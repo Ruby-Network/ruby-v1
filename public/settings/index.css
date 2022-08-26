@@ -288,7 +288,7 @@ span {
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 13px;
 }
 
 ::-webkit-scrollbar-track {
@@ -297,10 +297,10 @@ span {
 
 ::-webkit-scrollbar-thumb {
     background: #000000;
-    border-radius: 2px;
+    border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
-    border-radius: 2px;
+    border-radius: 4px;
 }
