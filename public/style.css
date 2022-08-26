@@ -169,6 +169,40 @@ p {
         text-align: center;
     }
 
+    .menu-button {
+        padding: 20px 0px 20px 20px;
+        color: hsla(0, 0%, 100%, 0.62);
+        font-size: 25px;
+        line-height: 22px;
+    }
+
+    .menu-button:hover {
+        color: #fff;
+    }
+
+    .menu-button.w--open {
+        background-color: transparent;
+        color: #fff;
+    }
+
+    .menu-text {
+        margin-right: 3px;
+        padding: 2px;
+        float: left;
+        font-size: 12px;
+        line-height: 19px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    .menu-text:hover {
+        color: #fff;
+    }
+
+    .menu-icon {
+        float: left;
+    }
+}
 
 
 input {
@@ -232,6 +266,21 @@ input[type=text] {
 }
 
 
+.header {
+    display: flex;
+    /* vertically align the content in the header */
+    align-items: center;
+    /* set a fixed height */
+    height: 40px;
+    margin-left: 15px;
+    padding: 0px 60px;
+    margin-bottom: 30px;
+}
+
+nav {
+    margin-left: auto;
+    margin-right: 90px;
+}
 
 span {
     color: #ffffff
@@ -255,4 +304,3 @@ span {
     background: #555;
     border-radius: 4px;
 }
-
