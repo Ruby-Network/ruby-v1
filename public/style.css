@@ -244,6 +244,7 @@ input {
   border-radius: 10px;
   background-color: #000000;
     transition: 0.5s;
+    align-items: center;
 }
 input[type=text] {
   transition: 0.5s;
