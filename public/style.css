@@ -216,6 +216,27 @@ font-family: 'Shadows Into Light';
   background-color: #000000;
     transition: 0.5s;
 }
+
+.input-inline {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+.input {
+  margin-bottom: 20px;
+  border-style: none;
+  background-color: hsla(0, 0%, 40%, 0.64);
+  color: #fff;
+}
+
+.input:focus {
+  box-shadow: 0 0 0 1px hsla(0, 0%, 100%, 0.77);
+}
+
+.input.textarea {
+  min-height: 110px;
+}
+
 input[type=text] {
   transition: 0.5s;
   color: white; 
@@ -265,22 +286,6 @@ span {
     color: #ffffff
 }
 
-.select-proxy {
-    width: 20%;
-    padding: 20px 20px;
-    margin: 10px 0;
-    box-sizing: border-box;
-    border: 1px black;
-    border-radius: 10px;
-    background-color: #000000;
-    transition: 0.5s;
-    text-align: center;
-    font-size: 15px;
-    color: white;
-    opacity: 1;
-    cursor: pointer;
-    font-family: 'Shadows Into Light';
-}
 
 ::-webkit-scrollbar {
     width: 13px;
