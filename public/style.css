@@ -122,7 +122,6 @@ p {
 }
 
 .hero-content {
-    position: absolute;
     top: 50%;
     width: 100%;
     -webkit-transform: translate(0%, -50%);
