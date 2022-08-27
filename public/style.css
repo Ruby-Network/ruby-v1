@@ -219,28 +219,6 @@ font-family: 'Shadows Into Light';
     transition: 0.5s;
 }
 
-.input-inline {
-    max-width: 100%;
-    margin-bottom: 20px;
-  }
-
-.input {
-  margin-bottom: 20px;
-  border-style: none;
-  background-color: hsla(0, 0%, 40%, 0.64);
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.input:focus {
-  box-shadow: 0 0 0 1px hsla(0, 0%, 100%, 0.77);
-}
-
-.input.textarea {
-  min-height: 110px;
-}
 
 input[type=text] {
   transition: 0.5s;
@@ -264,10 +242,6 @@ input[type=text] {
     opacity: 1;
     cursor: pointer;
     font-family: 'Shadows Into Light';
-}
-
-.settings {
-    text-align: center;
 }
 
 
