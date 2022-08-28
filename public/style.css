@@ -152,56 +152,6 @@ p {
     font-family: 'Shadows Into Light';
 }
 
-@media screen and (max-width: 991px) {
-    .nav-menu {
-        padding-top: 18px;
-        padding-bottom: 18px;
-        border-top: 1px solid #000;
-        background-color: rgba(0, 0, 0, 0.85);
-    }
-
-    .nav-link {
-        padding-top: 16px;
-        padding-bottom: 16px;
-        font-size: 21px;
-        line-height: 27px;
-        text-align: center;
-    }
-
-    .menu-button {
-        padding: 20px 0px 20px 20px;
-        color: hsla(0, 0%, 100%, 0.62);
-        font-size: 25px;
-        line-height: 22px;
-    }
-
-    .menu-button:hover {
-        color: #fff;
-    }
-
-    .menu-button.w--open {
-        background-color: transparent;
-        color: #fff;
-    }
-
-    .menu-text {
-        margin-right: 3px;
-        padding: 2px;
-        float: left;
-        font-size: 12px;
-        line-height: 19px;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-    }
-
-    .menu-text:hover {
-        color: #fff;
-    }
-
-    .menu-icon {
-        float: left;
-    }
-}
 
 
 input {
