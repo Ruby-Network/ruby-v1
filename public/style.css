@@ -78,19 +78,7 @@ p {
     font-weight: 300;
 }
 
-.nav-menu {
-    text-align: center;
-    color: white;
-    padding: 12px;
-    align-items: center;
-}
-
-.nav-menu .material-icons{
-    margin-right: 12px;
-    vertical-align: middle;
-}
-
-.nav-link {
+.nav-links {
     padding: 26px 13px;
     color: hsla(0, 0%, 100%, 0.62);
     font-size: 13px;
@@ -119,6 +107,40 @@ p {
 .nav-bar {
     background-color: transparent;
     position: fixed;
+}
+
+
+@media screen and (max-width: 768px){
+
+line{
+  width: 30px;
+  height: 3px;
+  background: #ffffff ;
+  margin: 5px;
+}
+
+
+nav{
+  position: relative;
+}
+
+.menu{
+  position: absolute;
+  cursor: pointer;
+  right: 5%;
+  top: 50%;
+  transform: translate(-5%, 50%);
+}
+
+
+ .nav-links{
+  position: fixed;
+background: #080080;
+height: 100vh;
+width: 100%;
+flex-direction: column;
+ }
+
 }
 
 .hero-content {
