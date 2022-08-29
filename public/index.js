@@ -4,6 +4,7 @@ const input = document.querySelector('input');
 
 if ('serviceWorker' in navigator) {
 window.navigator.serviceWorker.register(window.location.origin + "/sw.js", {scope: __uv$config.prefix})
+  localStorage.setItem("type", "Ultraviolet")
 }
 
 var Stomp = new StompBoot({
@@ -11,15 +12,18 @@ var Stomp = new StompBoot({
   directory: "/stomp/",
   loglevel: StompBoot.LOG_ERROR,
   codec: StompBoot.CODEC_XOR
+  localStorage.setItem("type", "Stomp")
 })
 
 if ('serviceWorker' in navigator) {
 window.navigator.serviceWorker.register(window.location.origin + "/dip-sw.js", {scope: __DIP.config.prefix })
+  localStorage.setItem("type", "DIP")
 }
 
 navigator.serviceWorker.register(window.location.origin + "/osana/sw.js", {
   scope: __osana$config.prefix,
   updateViaCache: "none"
+  localStorage.setItem("type", "Osana")
 })
 
 if ('serviceWorker' in navigator) {
@@ -28,6 +32,7 @@ navigator.serviceWorker.register(window.location.origin + "/aero-sw.js", {
   // Don't cache http requests
   updateViaCache: 'none',
   type: 'module'
+  localStorage.setItem("type", "Aero")
 })
 }
 
