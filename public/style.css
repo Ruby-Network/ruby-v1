@@ -121,6 +121,10 @@ p {
     position: fixed;
 }
 
+.hero-container {
+    padding-top: 35px;
+}
+
 .hero-content {
     top: 50%;
     width: 100%;
