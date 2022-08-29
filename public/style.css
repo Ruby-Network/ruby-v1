@@ -5,6 +5,27 @@
     margin-block: 3px;
 }
 
+
+a:link {
+    text-decoration: none;
+}
+
+
+a:visited {
+    text-decoration: none;
+}
+
+
+a:hover {
+    text-decoration: none;
+}
+
+
+a:active {
+    text-decoration: none;
+}
+
+
 body {
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(2%, rgba(0, 0, 0, 0.6)), color-stop(98%, rgba(0, 0, 0, 0.6))), url("https://uploads-ssl.webflow.com/62b89a760ac0e96394730919/62b89c634d120689b2392c39_background.jpg");
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 2%, rgba(0, 0, 0, 0.6) 98%), url("https://uploads-ssl.webflow.com/62b89a760ac0e96394730919/62b89c634d120689b2392c39_background.jpg");
@@ -14,17 +35,6 @@ body {
     background-attachment: scroll, fixed;
     font-weight: 300;
 }
-
-a:link { text-decoration: none; }
-
-
-a:visited { text-decoration: none; }
-
-
-a:hover { text-decoration: none; }
-
-
-a:active { text-decoration: none; }
 
 h1 {
     font-family: 'Shadows Into Light';
@@ -85,7 +95,7 @@ p {
     align-items: center;
 }
 
-.nav-menu .material-icons{
+.nav-menu .material-icons {
     margin-right: 12px;
     vertical-align: middle;
 }
@@ -156,78 +166,26 @@ p {
     font-family: 'Shadows Into Light';
 }
 
-@media screen and (max-width: 991px) {
-    .nav-menu {
-        padding-top: 18px;
-        padding-bottom: 18px;
-        border-top: 1px solid #000;
-        background-color: rgba(0, 0, 0, 0.85);
-    }
-
-    .nav-link {
-        padding-top: 16px;
-        padding-bottom: 16px;
-        font-size: 21px;
-        line-height: 27px;
-        text-align: center;
-    }
-
-    .menu-button {
-        padding: 20px 0px 20px 20px;
-        color: hsla(0, 0%, 100%, 0.62);
-        font-size: 25px;
-        line-height: 22px;
-    }
-
-    .menu-button:hover {
-        color: #fff;
-    }
-
-    .menu-button.w--open {
-        background-color: transparent;
-        color: #fff;
-    }
-
-    .menu-text {
-        margin-right: 3px;
-        padding: 2px;
-        float: left;
-        font-size: 12px;
-        line-height: 19px;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-    }
-
-    .menu-text:hover {
-        color: #fff;
-    }
-
-    .menu-icon {
-        float: left;
-    }
-}
-
 
 input {
-font-family: 'Shadows Into Light';
-  width: 52.5%;
-  padding: 20px 20px;
-  margin: 10px 0;
-  box-sizing: border-box;
-  border: 1px black;
-  border-radius: 10px;
-  background-color: #000000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    width: 52.5%;
+    padding: 20px 20px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 1px black;
+    border-radius: 10px;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transition: 0.5s;
 }
 
 
 input[type=text] {
-  transition: 0.5s;
-  color: white; 
-  
+    transition: 0.5s;
+    color: white;
+
 
 }
 
@@ -260,10 +218,10 @@ input[type=text] {
     margin-bottom: 30px;
 }
 
-.form{
-   display: flex;
-  justify-content: center;
-  align-items: center;   
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 nav {
