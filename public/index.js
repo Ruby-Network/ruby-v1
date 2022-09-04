@@ -74,6 +74,18 @@ function isUrl(val = ''){
     if (/^http(s?):\/\//.test(val) || val.includes('.') && val.substr(0, 1) !== ' ') return true;
     return false;
 };
+
+if (localStorage.getItem("type")) {
+  document.querySelector("#select-proxy option[value=" +   localStorage.getItem("type") + "]").setAttribute("selected", "");
+}
+
+function setProxy() {
+  const selector = document.getElementById('select-proxy');
+  const type = selector.value;
+
+  localStorage.setItem("type", type);
+}
+
 function myFunction() {
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
