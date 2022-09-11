@@ -1,41 +1,59 @@
-const form = document.querySelector("form");
-const input = document.querySelector("input");
+const form = document.querySelector(".form");
+const input = document.querySelector(".form input");
+const proxy = localStorage.getItem("type") || "Ultraviolet";
+const hasSW = "serviceWorker" in navigator;
 
-if ("serviceWorker" in navigator) {
-  window.navigator.serviceWorker.register(window.location.origin + "/sw.js", {
-    scope: __uv$config.prefix,
-  });
-}
+const loadSW = async (sw, opt) =>
+  hasSW && (await window.navigator.serviceWorker.register(`./${sw}`, opt));
 
-var Stomp = new StompBoot({
+// (async () => {
+//   switch (proxy) {
+//     case "Stomp":
+//       await loadScripts(["./scripts/stomp/bootstrapper.js"]);
+
+//     case "DIP":
+//       await loadScripts(["./scripts/stomp/bootstrapper.js"]);
+//     case "Osana":
+//       return "." + __osana$config.prefix + __osana$config.codec.encode(url);
+//     case "Aero":
+//       return "." + "/go/" + url;
+//     default:
+//       await loadScripts([
+//         "./scripts/uv/uv.bundle.js",
+//         "./scripts/uv/uv.config.js",
+//       ]);
+//   }
+// })();
+
+loadSW("uv-sw.js", {
+  scope: __uv$config.prefix,
+});
+
+const Stomp = new StompBoot({
   bare_server: "/bare/",
   directory: "/stomp/",
   loglevel: StompBoot.LOG_ERROR,
   codec: StompBoot.CODEC_XOR,
 });
 
-if ("serviceWorker" in navigator) {
-  window.navigator.serviceWorker.register(
-    window.location.origin + "/dip-sw.js",
-    { scope: __DIP.config.prefix }
-  );
-}
-
-navigator.serviceWorker.register(window.location.origin + "/osana/sw.js", {
-  scope: __osana$config.prefix,
-  updateViaCache: "none",
+loadSW("dip-sw.js", {
+  scope: __DIP.config.prefix,
 });
 
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register(window.location.origin + "/aero-sw.js", {
-    scope: "/go/",
-    // Don't cache http requests
-    updateViaCache: "none",
-    type: "module",
-  });
-}
+// loadSW("osana/sw.js", {
+//   scope: __osana$config.prefix,
+//   updateViaCache: "none",
+// });
 
-form.addEventListener("submit", async (event) => {
+loadSW("aero-sw.js", {
+  scope: "/go/",
+  // Don't cache http requests
+  updateViaCache: "none",
+  type: "module",
+});
+
+input.addEventListener("keydown", (event) => {
+  if (event.key !== "Enter") return;
   event.preventDefault();
   let url = input.value.trim();
   let urlstart = localStorage.getItem("urlstart");
@@ -47,9 +65,7 @@ form.addEventListener("submit", async (event) => {
     url = "http://" + url;
 
   function getLink(url) {
-    var type = localStorage.getItem("type") || "Ultraviolet";
-
-    switch (type) {
+    switch (proxy) {
       case "Ultraviolet":
         return "." + __uv$config.prefix + __uv$config.encodeUrl(url);
       case "Stomp":
