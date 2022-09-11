@@ -35,7 +35,7 @@ loadSW("aero-sw.js", {
 
 input.addEventListener("keydown", (event) => {
   if (event.key !== "Enter") return;
-  event.preventDefault();
+  // event.preventDefault();
   let url = input.value.trim();
   let urlstart = localStorage.getItem("urlstart");
   if (urlstart == null) {
@@ -45,24 +45,19 @@ input.addEventListener("keydown", (event) => {
   else if (!(url.startsWith("https://") || url.startsWith("http://")))
     url = "http://" + url;
 
-  function getLink(url) {
-    switch (proxy) {
-      case "Ultraviolet":
-        return "." + __uv$config.prefix + __uv$config.encodeUrl(url);
-      case "Stomp":
-        return "." + Stomp.html(url);
-      case "DIP":
-        return "." + __DIP.config.prefix + __uv$config.encodeUrl(url);
-      case "Osana":
-        return "." + __osana$config.prefix + __osana$config.codec.encode(url);
-      case "Aero":
-        return "." + "/go/" + url;
-      default:
-        return "." + __uv$config.prefix + __uv$config.encodeUrl(url);
-    }
+  switch (proxy) {
+    case "Stomp":
+      location.href = "." + Stomp.html(url);
+    case "DIP":
+      location.href = "." + __DIP.config.prefix + __uv$config.encodeUrl(url);
+    case "Osana":
+      location.href =
+        "." + __osana$config.prefix + __osana$config.codec.encode(url);
+    case "Aero":
+      location.href = "." + "/go/" + url;
+    default:
+      location.href = "." + __uv$config.prefix + __uv$config.encodeUrl(url);
   }
-
-  window.location.href = getLink();
 });
 
 function isUrl(val = "") {
@@ -80,13 +75,6 @@ if (localStorage.getItem("type")) {
       "#select-proxy option[value=" + localStorage.getItem("type") + "]"
     )
     .setAttribute("selected", "");
-}
-
-function setProxy() {
-  const selector = document.getElementById("select-proxy");
-  const type = selector.value;
-
-  localStorage.setItem("type", type);
 }
 
 function myFunction() {
