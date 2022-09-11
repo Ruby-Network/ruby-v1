@@ -6,25 +6,6 @@ const hasSW = "serviceWorker" in navigator;
 const loadSW = async (sw, opt) =>
   hasSW && (await window.navigator.serviceWorker.register(`./${sw}`, opt));
 
-// (async () => {
-//   switch (proxy) {
-//     case "Stomp":
-//       await loadScripts(["./scripts/stomp/bootstrapper.js"]);
-
-//     case "DIP":
-//       await loadScripts(["./scripts/stomp/bootstrapper.js"]);
-//     case "Osana":
-//       return "." + __osana$config.prefix + __osana$config.codec.encode(url);
-//     case "Aero":
-//       return "." + "/go/" + url;
-//     default:
-//       await loadScripts([
-//         "./scripts/uv/uv.bundle.js",
-//         "./scripts/uv/uv.config.js",
-//       ]);
-//   }
-// })();
-
 loadSW("uv-sw.js", {
   scope: __uv$config.prefix,
 });
