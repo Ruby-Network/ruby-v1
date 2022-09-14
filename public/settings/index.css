@@ -324,3 +324,20 @@ span {
     background: #555;
     border-radius: 4px;
 }
+
+button {
+    width: 20%;
+    padding: 20px 20px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 1px black;
+    border-radius: 10px;
+    background-color: #000000;
+    transition: 0.5s;
+    text-align: center;
+    font-size: 15px;
+    color: white;
+    opacity: 1;
+    cursor: pointer;
+    font-family: 'Shadows Into Light';
+}
