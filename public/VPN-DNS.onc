@@ -3,7 +3,7 @@
   "NetworkConfigurations": [
     {
       "GUID": "{7369acff-5d95-4148-9142-05538277dd59}",
-      "Name": "KozmikVPN-DNS",
+      "Name": "HAVEN and Kozmik KozmikVPN-DNS",
       "Type": "VPN",
       "NameServersConfigType": "Static",
       "StaticIPConfig": {
