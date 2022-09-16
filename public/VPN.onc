@@ -3,7 +3,7 @@
   "NetworkConfigurations": [
     {
       "GUID": "{290363da-1eaa-435d-b895-c92b7abf64a6}",
-      "Name": "KozmikVPN-Updated",
+      "Name": "HAVEN & Kozmik VPN ",
       "Type": "VPN",
       "VPN": {
         "Type": "L2TP-IPsec",
