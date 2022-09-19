@@ -218,7 +218,38 @@ input[type=text] {
     margin-bottom: 30px;
 }
 
-.form {
+footer {
+    margin-top: auto;
+    width: 93%;
+    align-self: center;
+    height: 80px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+ position: fixed ;
+ left: 0px;
+ bottom: 0px;
+
+}
+
+footer a,
+footer span {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #FFF;
+    font-size: 15px;
+}
+
+footer a {
+    cursor: pointer;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+form {
     display: flex;
     justify-content: center;
     align-items: center;
