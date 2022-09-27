@@ -6,7 +6,7 @@ const httpServer = http.createServer();
 
 const expressServer = express();
 
-expressServer.use(express.static('public'))
+expressServer.use(express.static('/public/'))
 
 const bareServer = createBareServer('/bare/', {
 	logErrors: false,
