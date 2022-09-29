@@ -1,42 +1,47 @@
-import createBareServer from '@tomphttp/bare-server-node';
-import http from 'http';
-import express from 'express';
+import createServer from "@tomphttp/bare-server-node";
+import http from "http";
+import serveStatic from "serve-static";
+import { publicPath } from "wc-static";
 
-const httpServer = http.createServer();
+const bare = createServer("/bare/");
+const serve = serveStatic(publicPath, { fallthrough: false });
+const server = http.createServer();
 
-const expressServer = express();
-
-expressServer.use(express.static('public'))
-
-const bareServer = createBareServer('/bare/', {
-	logErrors: false,
-	localAddress: undefined,
-	maintainer: {
-		email: 'tomphttp@sys32.dev',
-		website: 'https://github.com/tomphttp/',
-	},
+server.on("request", (req, res) => {
+  if (bare.shouldRoute(req)) {
+    bare.routeRequest(req, res);
+  } else {
+    serve(req, res, (err) => {
+      res.writeHead(err?.statusCode || 500, null, {
+        "Content-Type": "text/plain",
+      });
+      res.end(err?.stack);
+    });
+  }
 });
 
-httpServer.on('request', (req, res) => {
-	if (bareServer.shouldRoute(req)) {
-		bareServer.routeRequest(req, res);
-	} else {
-		expressServer(req, res);
-	}
+server.on("upgrade", (req, socket, head) => {
+  if (bare.shouldRoute(req, socket, head)) {
+    bare.routeUpgrade(req, socket, head);
+  } else {
+    socket.end();
+  }
 });
 
-httpServer.on('upgrade', (req, socket, head) => {
-	if (bareServer.shouldRoute(req)) {
-		bareServer.routeUpgrade(req, socket, head);
-	} else {
-		socket.end();
-	}
+let port = parseInt(process.env.PORT || "");
+
+if (isNaN(port)) port = 8080;
+
+server.on("listening", () => {
+  const address = server.address();
+
+  console.log(
+    `Listening on http://${
+      address.family === "IPv6" ? `[${address.address}]` : address.address
+    }:${address.port}`
+  );
 });
 
-httpServer.on('listening', () => {
-	console.log('HTTP server listening');
-});
-
-httpServer.listen({
-	port: 8080,
+server.listen({
+  port,
 });

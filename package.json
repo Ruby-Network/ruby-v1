@@ -1,1 +1,13 @@
-{"type":"module","dependencies":{"@tomphttp/bare-client":"^1.0.5","@tomphttp/bare-server-node":"^1.0.3-deps2","express":"^4.18.1"}}
+{
+    "type": "module",
+    "scripts": {
+        "start": "node index.js"
+      },
+    "dependencies": {
+        "@tomphttp/bare-client": "^1.0.5",
+        "@tomphttp/bare-server-node": "^1.0.3-deps2",
+        "express": "^4.18.1",
+        "serve-static": "^1.15.0",
+        "wc-static": "https://github.com/Weeb-Network/wc-static/releases/download/v1.0.1/wc-static-1.0.1.tgz"
+    }
+}
