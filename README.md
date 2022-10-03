@@ -1,5 +1,8 @@
 # WeebCentral (WC)
-Weeb Centeral is a proxy website that uses multiple backends. Such as:
+<a href="https://discord.gg/HUKuWtXwS5"><img align="left" src="./Images_for_readme/discord.svg" alt="Yu Shi | Medium" width="21px"/>| Join Our Discord!</a>
+<br>
+
+Weeb Central is a proxy website that uses multiple backends. Such as:
 - [Ultraviolet](https://github.com/titaniumnetwork-development/Ultraviolet)
 
 And others coming soon (so I won't list them here)
@@ -56,7 +59,17 @@ $ docker-compose up -d
 #### Docker Only Installation
 - Run the following command
 ```bash
-$ docker run -d -p <your port here>:8080 motortruck1221/wc:latest
+$ docker run -d -p <your port here>:8080 --restart unless-stopped --name wc motortruck1221/wc:latest 
 ```
 - Change `<your port here>` to the port you want to use removing the `<>` around it.
+---
+## Contributing
+Contributions are great and welcome! If you want to contribute, please read the [Contributing Guidelines](./CONTRIBUTING.md) first.
+## License
+---
+All code is licensed under the [GPL-3.0 License](./LICENSE.md) Unless otherwise stated.
+# Icons credit
+- Discord Logo at the top <br> 
+<a target="_blank" href="https://icons8.com/icon/M725CLW4L7wE/discord-new">Discord New</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+
 
