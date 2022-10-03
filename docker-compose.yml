@@ -1,6 +1,7 @@
 version: "2"
 services:
   wc:
+    restart: unless-stopped
     image: "motortruck1221/wc:latest"
     ports:
     #IMPORTANT: DO NOT CHANGE THE 8080 PART ONLY CHANGE THE <your port here> PART
