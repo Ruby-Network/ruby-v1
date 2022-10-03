@@ -32,7 +32,6 @@ $ npm start
 #### Requirements
 - Install docker and docker-compose (if you don't have it already) 
 #### Installation
-License
 - Copy the docker compose example below and paste it into a file called `docker-compose.yml`
 ```yaml
 version: "2"
