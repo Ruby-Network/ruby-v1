@@ -8,7 +8,6 @@
         "@tomphttp/bare-server-node": "^1.0.3-deps2",
         "express": "^4.18.1",
         "serve-static": "^1.15.0",
-	"ultraviolet": "https://github.com/titaniumnetwork-development/Ultraviolet/releases/download/v1.0.1/ultraviolet-1.0.1.tgz",
-        "wc-static": "https://github.com/Weeb-Network/wc-static/releases/download/v1.0.2/wc-static-1.0.2.tgz"
+        "wc-static": "https://github.com/Weeb-Network/wc-static/releases/download/v1.0.1/wc-static-1.0.1.tgz"
     }
 }

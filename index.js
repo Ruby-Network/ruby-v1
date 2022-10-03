@@ -1,37 +1,24 @@
 import createServer from "@tomphttp/bare-server-node";
 import http from "http";
 import serveStatic from "serve-static";
-import { uvPath } from "ultraviolet";
 import { publicPath } from "wc-static";
 
 const bare = createServer("/bare/");
 const serve = serveStatic(publicPath, { fallthrough: false });
-const serveUV = serveStatic(uvPath, { fallthrough: false });
 const server = http.createServer();
 
 server.on("request", (req, res) => {
   if (bare.shouldRoute(req)) {
     bare.routeRequest(req, res);
   } else {
-    if (req.url.startsWith("/uv/")) {
-      req.url = req.url.slice("/uv".length);
-      serveUV(req, res, (err) => {
-        res.writeHead(err?.statusCode || 500, null, {
-          "Content-Type": "text/plain",
-        });
-        res.end(err?.stack);
+    serve(req, res, (err) => {
+      res.writeHead(err?.statusCode || 500, null, {
+        "Content-Type": "text/plain",
       });
-    } else {
-      serve(req, res, (err) => {
-        res.writeHead(err?.statusCode || 500, null, {
-          "Content-Type": "text/plain",
-        });
-        res.end(err?.stack);
-      });
-    }
+      res.end(err?.stack);
+    });
   }
 });
-
 server.on("upgrade", (req, socket, head) => {
   if (bare.shouldRoute(req, socket, head)) {
     bare.routeUpgrade(req, socket, head);
@@ -39,11 +26,7 @@ server.on("upgrade", (req, socket, head) => {
     socket.end();
   }
 });
-
-let port = parseInt(process.env.PORT || "");
-
-if (isNaN(port)) port = 8080;
-
+let port = parseInt(process.env.PORT || "8080");
 server.on("listening", () => {
   const address = server.address();
 
@@ -53,7 +36,6 @@ server.on("listening", () => {
     }:${address.port}`
   );
 });
-
 server.listen({
   port,
 });
