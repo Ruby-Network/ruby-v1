@@ -64,7 +64,7 @@ $ docker run -d -p <your port here>:8080 --restart unless-stopped --name wc moto
 - Change `<your port here>` to the port you want to use removing the `<>` around it.
 ---
 ## Contributing
-Contributions are great and welcome! If you want to contribute, please read the [Contributing Guidelines](./CONTRIBUTING.md) first.
+Contributions are great and welcome! If you want to contribute, please read the [Contributing Guidelines](./.github/CONTRIBUTING.md) first.
 ## License
 ---
 All code is licensed under the [GPL-3.0 License](./LICENSE.md) Unless otherwise stated.
