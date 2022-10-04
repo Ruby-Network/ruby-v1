@@ -2,7 +2,7 @@
 
 Contributing is welcome! If you wish to contribute please remember that this repository does not contain the staic files for the website itself. This repository is simply for the Docker files and the way you would deploy this website. If you wish to contribute to the website itself please go to the [Wc-static](https://github.com/weeb-network/wc-static) repository.
 
-<!-- Please note we have a code of conduct, please follow it in all your interactions with the project. -->
+Please note we have a code of conduct, please follow it in all your interactions with the project.
 
 ## Pull Request Process
 

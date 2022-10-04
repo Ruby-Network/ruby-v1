@@ -1,10 +1,18 @@
+---
+name: Bug report Or Feature request
+about: Report a Bug or submit a Feature that you would like to see
+title: "[BUG/Feature Request]"
+labels: ''
+assignees: ''
+
+---
+
 **Note: for support questions, please use our [Discord](https://discord.gg/HUKuWtXwS5)**. This repository's issues are reserved for feature requests and bug reports.
 
 * **I'm submitting a ...**
-  - [ ] bug report
-  - [ ] feature request
-  - [ ] support request => Please do not submit support request here, see note at the top of this template.
-
+  - [  ] bug report
+  - [  ] feature request
+  - [  ] support request => Please do not submit support request here, see note at the top of this template.
 
 * **Do you want to request a *feature* or report a *bug*?**
 
