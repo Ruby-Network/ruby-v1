@@ -1,5 +1,5 @@
 # WeebCentral (WC)
-<a href="https://discord.gg/HUKuWtXwS5"><img align="left" src="https://github.com/Weeb-Network/wc/raw/main/Images_for_readme/discord.svg" alt="Discord" width="21px"/> | Join Our Discord!</a>
+<a href="https://discord.gg/HUKuWtXwS5"><img align="left" src="https://github.com/Weeb-Network/wc/raw/main/Images_for_readme/discord.svg" alt="Discord" width="21px"/>| Join Our Discord!</a>
 <br>
 
 Weeb Central is a proxy website that uses multiple backends. Such as:
