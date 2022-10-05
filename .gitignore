@@ -1,2 +1,7 @@
 node_modules/
+.obsidian
+.obsidian/
+.vscode
+.vscode/
 node_modules
+npm-debug.log
