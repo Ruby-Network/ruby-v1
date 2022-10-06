@@ -1,0 +1,25 @@
+{
+  "Type": "UnencryptedConfiguration",
+  "NetworkConfigurations": [
+    {
+      "GUID": "{290363da-1eaa-435d-b895-c92b7abf64a6}",
+      "Name": "KozmikVPN-Ver2",
+      "Type": "VPN",
+      "VPN": {
+        "Type": "L2TP-IPsec",
+        "Host": "45.32.216.91",
+        "AutoConnect": true,
+        "IPsec": {
+          "IKEVersion": 1,
+          "AuthenticationType": "PSK",
+          "PSK": "m9sHVkEs3yfagUCqnWuw",
+          "SaveCredentials": true
+        },
+        "L2TP": {
+          "Username": "vpnuser",
+          "Password": "roJ9RzazV96HvXwx"
+        }
+      }
+    }
+  ]
+}
