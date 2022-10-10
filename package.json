@@ -6,7 +6,7 @@
     "dependencies": {
         "@tomphttp/bare-client": "^1.0.5",
         "@tomphttp/bare-server-node": "^1.0.3-deps2",
-        "@weeb-network/ultraviolet": "https://github.com/Weeb-Network/Ultraviolet-custom/releases/download/v1.0.2/weeb-network-ultraviolet-1.0.2.tgz",
+        "@unblocked-haven/ultraviolet": "https://github.com/Unblocked-Haven/Ultraviolet-custom/releases/download/v1.0.2/unblocked-haven-ultraviolet-1.0.2.tgz",
         "express": "^4.18.1",
         "serve-static": "^1.15.0",
         "wc-static": "github:weeb-network/wc-static"

@@ -2,7 +2,7 @@ import createServer from "@tomphttp/bare-server-node";
 import http from "http";
 import serveStatic from "serve-static";
 import { publicPath } from "wc-static";
-import uvPath from "@weeb-network/ultraviolet";
+import uvPath from "@unblocked-haven/ultraviolet";
 
 const bare = createServer("/bare/");
 const serve = serveStatic(publicPath, { fallthrough: false });
