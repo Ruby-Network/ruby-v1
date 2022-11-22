@@ -41,7 +41,7 @@ version: "2"
 services:
   wc:
     restart: unless-stopped
-    image: "motortruck1221/wc:latest"
+    image: "ghcr.io/weeb-network/wc:main"
     ports:
     #IMPORTANT: DO NOT CHANGE THE 8080 PART ONLY CHANGE THE <your port here> PART
       - <your port here>:8080
@@ -59,7 +59,7 @@ $ docker-compose up -d
 #### Docker Only Installation
 - Run the following command
 ```bash
-$ docker run -d -p <your port here>:8080 --restart unless-stopped --name wc motortruck1221/wc:latest 
+$ docker run -d -p <your port here>:8080 --restart unless-stopped --name wc ghcr.io/weeb-network/wc:main 
 ```
 - Change `<your port here>` to the port you want to use removing the `<>` around it.
 ---
