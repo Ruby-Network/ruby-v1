@@ -8,7 +8,7 @@ Weeb Central is a proxy website that uses multiple backends. Such as:
 And others coming soon (so I won't list them here)
 
 Here is a preview of the website: 
-![Preview](./Images_for_readme/Preview.png)
+![Preview](https://user-images.githubusercontent.com/73721704/204464818-706c9317-15a9-471d-999c-c2a73df966c6.png)
 
 ## Self Hosting
 ---
