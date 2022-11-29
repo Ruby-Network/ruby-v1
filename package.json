@@ -4,9 +4,9 @@
         "start": "node index.js"
     },
     "dependencies": {
-        "@titaniumnetwork-dev/ultraviolet": "^1.0.3",
+        "@titaniumnetwork-dev/ultraviolet": "^1.0.4-beta.6",
         "@tomphttp/bare-client": "^1.0.5",
-        "@tomphttp/bare-server-node": "^1.0.3-deps2",
+        "@tomphttp/bare-server-node": "^1.2.2",
         "@unblocked-haven/ultraviolet": "https://github.com/Unblocked-Haven/Ultraviolet-custom/releases/download/v1.0.2/unblocked-haven-ultraviolet-1.0.2.tgz",
         "express": "^4.18.2",
         "wc-static": "github:weeb-network/wc-static"
