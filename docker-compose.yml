@@ -6,3 +6,8 @@ services:
     ports:
     #IMPORTANT: DO NOT CHANGE THE 8080 PART ONLY CHANGE THE <your port here> PART
       - <your port here>:8080
+   #ADVANCED ITEMS BELOW
+#networks:
+#  default:
+#    external:
+#      name: default_net
