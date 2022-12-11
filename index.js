@@ -15,6 +15,23 @@ app.use(express.static(publicPath));
 // The vendor's uv.config.js won't conflict with our uv.config.js inside the publicPath directory.
 app.use("/uv/", express.static(uvPath));
 
+app.get("/suggest", (req, res) => {
+  // Get the search query from the query string
+  const query = req.query.q;
+
+  // Make a request to the Brave API
+  fetch(`https://search.brave.com/api/suggest?q=${encodeURIComponent(query)}&format=json`)
+    .then((response) => response.json())
+    .then((data) => {
+      // Send the response data back to the browser
+      res.json(data);
+    })
+    .catch((error) => {
+      // Handle the error
+      console.error(error);
+      res.sendStatus(500);
+    });
+});
 // Error for everything else
 app.use((req, res) => {
   res.status(404);
