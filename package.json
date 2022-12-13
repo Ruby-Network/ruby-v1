@@ -5,7 +5,7 @@
     },
     "dependencies": {
         "@titaniumnetwork-dev/ultraviolet": "^1.0.5",
-        "@tomphttp/bare-client": "^1.0.4",
+        "@tomphttp/bare-client": "^1.0.5",
         "@tomphttp/bare-server-node": "^1.2.2",
         "express": "^4.18.2",
         "wc-static": "github:Weeb-Network/wc-static"
