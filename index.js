@@ -5,6 +5,10 @@ import { publicPath } from "wc-static";
 import { uvPath } from "@titaniumnetwork-dev/ultraviolet";
 import { join } from "node:path";
 import { hostname } from "node:os";
+const blocklist = [
+  "now.gg",
+  "www.now.gg"
+]
 
 const bare = createBareServer("/bare/");
 const app = express();
