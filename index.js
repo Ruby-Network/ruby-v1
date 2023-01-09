@@ -1,7 +1,7 @@
 import createBareServer from "@tomphttp/bare-server-node";
 import express from "express";
 import { createServer } from "node:http";
-import { publicPath } from "wc-static";
+import { publicPath } from "ruby-static";
 import { uvPath } from "@titaniumnetwork-dev/ultraviolet";
 import { join } from "node:path";
 import { hostname } from "node:os";
@@ -35,6 +35,29 @@ app.get("/suggest", (req, res) => {
       console.error(error);
       res.sendStatus(500);
     });
+});
+
+app.get("/barePath", (req, res) => {
+    res.set("Content-Type", "application/xhtml+xml");
+    // fetch localstorage data and add it to a div
+    res.send(`
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+    
+    <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+        <head>
+            <title>Hello world</title>
+        </head>
+    
+        <body>
+            <div id="data"></div>
+            <script>
+                const data = localStorage.getItem("barePath");
+                document.getElementById("data").innerHTML = data;
+            </script>
+        </body>
+    </html>
+    `);
+    res.end();
 });
 // Error for everything else
 app.use((req, res) => {
