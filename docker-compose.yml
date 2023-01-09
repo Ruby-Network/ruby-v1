@@ -1,8 +1,8 @@
 version: "2"
 services:
-  wc:
+  ruby:
     restart: unless-stopped
-    image: "ghcr.io/weeb-network/wc:main"
+    image: "ghcr.io/ruby-network/ruby:main"
     ports:
     #IMPORTANT: DO NOT CHANGE THE 8080 PART ONLY CHANGE THE <your port here> PART
       - <your port here>:8080
