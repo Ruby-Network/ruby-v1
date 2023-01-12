@@ -10,7 +10,7 @@ Multiple backends:
 - [DIP](https://github.com/Dynamic-Interception-Proxy/DIP)
 
 Here is a preview of the website: 
-![Preview](https://user-images.githubusercontent.com/73721704/204464818-706c9317-15a9-471d-999c-c2a73df966c6.png)
+![image](https://user-images.githubusercontent.com/73721704/212001695-7cbf00c7-b13b-419f-8373-aa5372b143fc.png)
 
 ## Self Hosting
 - Find out how to self host  <a href="https://github.com/Ruby-Network/ruby/wiki/Self-Host-On-Your-Own-Machine">here</a>
