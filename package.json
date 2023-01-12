@@ -9,6 +9,6 @@
         "@tomphttp/bare-server-node": "^1.2.2",
         "express": "^4.18.2",
         "node-localstorage": "^2.2.1",
-        "ruby-static": "file:../ruby-static"
+        "ruby-static": "github:Ruby-Network/ruby-static"
     }
 }
