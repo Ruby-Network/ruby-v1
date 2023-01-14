@@ -1,14 +1,25 @@
 {
+    "name": "ruby",
+    "version": "1.0.0",
+    "description": "",
+    "main": "src/index.js",
     "type": "module",
     "scripts": {
-        "start": "node index.js"
+        "start": "node src/index.js"
     },
+    "repository": {
+        "type": "git",
+        "url": "git:https://github.com/Ruby-Network/ruby"
+    },
+    "keywords": [
+      "proxy"
+    ],
+    "author": "Ruby-Network",
+    "license": "GPL-3.0-or-later",
     "dependencies": {
-        "@titaniumnetwork-dev/ultraviolet": "^1.0.5",
-        "@tomphttp/bare-client": "^1.0.5",
+        "@titaniumnetwork-dev/ultraviolet": "^1.0.7",
         "@tomphttp/bare-server-node": "^1.2.2",
         "express": "^4.18.2",
-        "node-localstorage": "^2.2.1",
         "ruby-static": "github:Ruby-Network/ruby-static"
     }
 }

@@ -1,7 +1,5 @@
-node_modules/
-.obsidian
-.obsidian/
-.vscode
-.vscode/
 node_modules
+.obsidian
+.vscode
 npm-debug.log
+yarn-error.log
