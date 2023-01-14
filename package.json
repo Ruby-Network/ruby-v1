@@ -11,9 +11,7 @@
         "type": "git",
         "url": "git:https://github.com/Ruby-Network/ruby"
     },
-    "keywords": [
-      "proxy"
-    ],
+    "keywords": [],
     "author": "Ruby-Network",
     "license": "GPL-3.0-or-later",
     "dependencies": {
