@@ -1,6 +1,6 @@
 # Ruby
 
-[![Ruby Network Discord](https://invidget.switchblade.xyz/hzCjSFQeeZ?theme=light)](https://discord.gg/hzCjSFQeeZ)
+[![Ruby Network Discord](https://invidget.switchblade.xyz/hzCjSFQeeZ?theme=dark)](https://discord.gg/hzCjSFQeeZ)
 
 Ruby is the flagship proxy of Ruby Network featuring...
 
