@@ -14,7 +14,7 @@ TONS OF THEMES:
 Including but not limited to:
   - PINK ![pink](https://user-images.githubusercontent.com/73721704/212525165-a8757db4-cac9-47fd-b5c7-6dd5e1933cdb.png)
   - DARK ![dark](https://user-images.githubusercontent.com/73721704/212525233-12717d9d-5219-4fee-b467-6268ef595acb.png)
-  - PURPLE ![purple](https://user-images.githubusercontent.com/73721704/212525283-312a07e3-fb7d-4c99-8187-2c2ba31864de.png)
+  - PURPLE ![purple](https://user-images.githubusercontent.com/73721704/212525435-05751317-33c3-43d5-98a6-e535626f1152.png)
 
 ## Self Hosting
 - Find out how to self host [here](https://github.com/Ruby-Network/ruby/wiki/Self-Host-On-Your-Own-Machine).
