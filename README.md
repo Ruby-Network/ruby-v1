@@ -18,4 +18,4 @@ Here is a preview of the website:
 Contributions are great and welcome! If you want to contribute, please read the [Contributing Guidelines](./.github/CONTRIBUTING.md) first.
 
 ## License
-[GPL-3.0](./LICENSE.md).
+All code is licensed under the [GPL-3.0 License](./LICENSE.md) Unless otherwise stated.
