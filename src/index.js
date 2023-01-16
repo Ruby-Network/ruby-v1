@@ -5,34 +5,60 @@ import { publicPath } from "ruby-static";
 import { uvPath } from "@titaniumnetwork-dev/ultraviolet";
 import { join } from "node:path";
 import { hostname } from "node:os";
-
-// The following message MAY NOT be removed
-console.log("Ruby\nThis program comes with ABSOLUTELY NO WARRANTY.\nThis is free software, and you are welcome to redistribute it\nunder the terms of the GNU General Public License as published by\nthe Free Software Foundation, either version 3 of the License, or\n(at your option) any later version.\n\nYou should have received a copy of the GNU General Public License\nalong with this program. If not, see <https://www.gnu.org/licenses/>.\n");
-
 const blocklist = [
   "now.gg",
   "www.now.gg"
-];
+]
 
 const bare = createBareServer("/bare/");
 const app = express();
 
+// Load our publicPath first and prioritize it over UV.
 app.use(express.static(publicPath));
+// Load vendor files last.
+// The vendor's uv.config.js won't conflict with our uv.config.js inside the publicPath directory.
 app.use("/uv/", express.static(uvPath));
 
-app.get("/suggest", async (req, res) => {
-  // Why is this used instead of @tomphttp/bare-client in ruby-static ?
-  try {
-    const res = await fetch(`https://search.brave.com/api/suggest?q=${encodeURIComponent(req.query.q)}&format=json`);
-    const data  = res.json();
-    res.json(data);
-  } catch(err) {
-    console.error(err);
-    res.sendStatus(500);
-  }
+app.get("/suggest", (req, res) => {
+  // Get the search query from the query string
+  const query = req.query.q;
+
+  // Make a request to the Brave API
+  fetch(`https://search.brave.com/api/suggest?q=${encodeURIComponent(query)}&format=json`)
+    .then((response) => response.json())
+    .then((data) => {
+      // Send the response data back to the browser
+      res.json(data);
+    })
+    .catch((error) => {
+      // Handle the error
+      console.error(error);
+      res.sendStatus(500);
+    });
 });
 
-
+app.get("/barePath", (req, res) => {
+    res.set("Content-Type", "application/xhtml+xml");
+    // fetch localstorage data and add it to a div
+    res.send(`
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+    
+    <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+        <head>
+            <title>Hello world</title>
+        </head>
+    
+        <body>
+            <div id="data"></div>
+            <script>
+                const data = localStorage.getItem("barePath");
+                document.getElementById("data").innerHTML = data;
+            </script>
+        </body>
+    </html>
+    `);
+    res.end();
+});
 // Error for everything else
 app.use((req, res) => {
   res.status(404);
@@ -69,9 +95,13 @@ server.on("listening", () => {
   console.log("Listening on:");
   console.log(`\thttp://localhost:${address.port}`);
   console.log(`\thttp://${hostname()}:${address.port}`);
-  console.log(`\thttp://${
-    address.family === "IPv6" ? `[${address.address}]` : address.address
-  }:${address.port}`);
+  console.log(
+    `\thttp://${
+      address.family === "IPv6" ? `[${address.address}]` : address.address
+    }:${address.port}`
+  );
 });
 
-server.listen({ port });
+server.listen({
+  port,
+});
