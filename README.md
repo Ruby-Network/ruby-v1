@@ -1,6 +1,7 @@
 # Ruby
 
 [![Ruby Network Discord](https://invidget.switchblade.xyz/hzCjSFQeeZ?theme=dark)](https://discord.gg/hzCjSFQeeZ)
+---
 
 ![image](https://user-images.githubusercontent.com/73721704/212001695-7cbf00c7-b13b-419f-8373-aa5372b143fc.png)
 
